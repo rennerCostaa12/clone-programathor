@@ -1,0 +1,49 @@
+.card-content{
+    cursor: pointer;
+    width: 350px;
+    border: 1px solid  #adadada1;
+    background-color: #ffff;
+}
+
+.content-logo{
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid  #adadada1;
+    padding: 0.3rem 1rem;
+}
+
+.content-logo img{
+    width: 150px;
+}
+
+.content-detail-vacancy{
+    padding: 2rem 0;
+}
+
+.content-detail-vacancy:hover{
+    background-color: #F4F4F4;
+}
+
+.name-vacancy{
+    text-align: center;
+    font-size: 25px;
+    color: #34495E;
+}
+
+.content-descriptions-vacancy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    color: #808080;
+    margin: 1rem 0;
+}
+
+.content-descriptions-vacancy span{
+    font-size: 16px;
+}
+
+.content-descriptions-vacancy span i{
+    margin-right: 0.5rem;
+}

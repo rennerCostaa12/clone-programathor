@@ -1,0 +1,50 @@
+.carousel-inner {
+    width: 100%;
+    height: 50vh;
+}
+
+.carousel-item{
+    text-align: center;
+}
+
+.carousel-inner p{
+    font-size: 18px;
+    text-align: center;
+    color: #333333;
+}
+
+.carousel-indicators li {
+    border-radius: 360px;
+    width: 100px !important;
+    height: 90px !important;
+
+    background-position: center;
+    background-size: cover;
+}
+
+.carousel-indicators li:first-child {
+    background-image: url('https://programathor.com.br/assets/foto-bruno-392cd6d8ae067b706c533a006dcd883006b7b90e49bbefe0dbdb33bc216669b7.jpg');
+}
+
+.indicator-2 {
+    background-image: url('https://programathor.com.br/assets/foto-ademir-8f265dc9a69410493febd900b107a71adf44bb375e8f87ba687482a5020aa96d.jpg');
+}
+
+.indicator-3 {
+    background-image: url('https://programathor.com.br/assets/eduardo-fa9eeffff5fd81e5aeaedcc9535c3eb566749f6d5532d9ec0c62b882b13412c4.png');
+}
+
+.content-btn-prev-and-next{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 40%;
+}
+
+.content-btn-prev-and-next button{
+    background: none;
+    border: none;
+    font-size: 40px;
+    outline: none;
+}
