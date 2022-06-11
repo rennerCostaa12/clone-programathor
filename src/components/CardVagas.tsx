@@ -1,4 +1,5 @@
 import "../css/CardVaga.css";
+import "../css/responsive.css";
 
 interface CardVagasProps {
     sourceImage: string,

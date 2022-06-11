@@ -1,47 +1,52 @@
-.container-nav{
-    margin: 0rem 1.2rem 0 1.2rem;
+.container-nav {
+    width: 100%;
+    position: fixed;
+    padding: 0 1rem;
     display: flex;
     justify-content: space-between;
     font-family: 'Open Sans', sans-serif;
     align-items: center;
+    background-color: #fff;
+    z-index: 1000;
 }
 
-.container-nav ul{
+.container-nav ul {
     display: flex;
     align-items: center;
     list-style: none;
     margin: 0;
 }
 
-.container-nav ul li{
-    margin: 2rem 0rem;
+.container-nav ul li {
+    margin: 1.5rem 0rem;
 }
 
-.container-nav ul li a{
+.container-nav ul li a {
     text-decoration: none;
     color: #34495E;
     font-weight: bold;
     font-size: 16px;
-    padding: 2rem  2rem;
+    padding: 24px 20px;
 }
 
-.container-nav ul li a:hover{
+.container-nav ul li a:hover {
     background-color: #93989c38;
     color: black;
 }
 
-.btn-cadastrar button{
-    margin: 0 1rem;
+.btn-cadastrar button {
+    margin-left: 1.5rem;
     background-color: #34495E;
     color: #fff;
     font-size: 16px;
     font-weight: bold;
-    padding: 0.6rem 0.8rem;
+    padding: 6px 12px;
     border: none;
     cursor: pointer;
     border-radius: 2px;
+    font-size: 16px;
 }
 
-.btn-cadastrar button:hover{
+.btn-cadastrar button:hover {
     background-color: #303d4b;
 }

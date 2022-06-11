@@ -1,25 +1,31 @@
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: "Open Sans", "Helvetica", "sans-serif";
     font-weight: 500;
 }
 
-.container-vagas-banner{
+.container-vagas-banner {
     background-image: linear-gradient(-225deg, #0065a899 0%, #00243d99 50%), url(../assets/background-vagas.jpg);
     background-size: cover;
     color: #fff;
     padding: 0.8rem;
 }
 
-.vagas-content h1 ,p{
+.vagas-content h1,
+p {
     text-align: center;
 }
 
-.vagas-content h1{
+.vagas-content h1 {
     font-size: 32px;
     line-height: 70px;
 }
 
-.vagas-content p{
+.vagas-content p {
     display: flex;
     justify-content: center;
     font-size: 16px;
@@ -27,26 +33,27 @@ h1, h2, h3, h4, h5, h6{
     line-height: 30px;
 }
 
-.input-group{
+.input-group {
     display: flex;
-    justify-content: center;;
+    justify-content: center;
+    ;
 }
 
-.input-group form{
+.input-group form {
     width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 2rem;
 }
 
-.input-group button{
+.input-group button {
     padding: 1rem;
     font-size: 16px;
     border: 1px solid #808080ad;
     cursor: pointer;
 }
 
-.input-group select{
+.input-group select {
     padding: 0.5rem;
     font-size: 20px;
     width: 40%;
@@ -54,35 +61,40 @@ h1, h2, h3, h4, h5, h6{
     border: 1px solid #808080ad;
 }
 
-.container-contentmain{
+.container-vagas {
+    display: flex;
+    justify-content: center;
+}
+
+.content-vagas {
     margin: 2.5rem;
 }
 
-.breadcrumb{
+.breadcrumb {
     background: none;
 }
 
-.breadcrumb a{
+.breadcrumb a {
     color: #34495E;
     text-decoration: none;
 }
 
-.breadcrumb a:hover{
+.breadcrumb a:hover {
     color: #000000;
     text-decoration: underline;
 }
 
-.breadcrumb p{
+.breadcrumb p {
     text-align: start;
     color: #777777;
 }
 
-.breadcrumb{
+.breadcrumb {
     display: flex;
     gap: 8px;
 }
 
-.container-cadastro-thor{
+.container-cadastro-thor {
     padding: 2rem;
     margin: 2rem 0;
     display: flex;
@@ -91,65 +103,67 @@ h1, h2, h3, h4, h5, h6{
     background-color: #F4F4F4;
 }
 
-.container-cadastro-thor a{
+.container-cadastro-thor a {
     font-size: 20px;
     text-decoration: none;
     color: #34495E;
 }
 
-.container-cadastro-thor img{
+.container-cadastro-thor img {
     width: 90px;
 }
 
-.create-perfil-content{
+.create-perfil-content {
     width: 50%;
 }
 
 
-.btn-mecadastrar button:hover{
+.btn-mecadastrar button:hover {
     background-color: #1e886d;
 }
 
-.container-content-vagas{
+.container-content-vagas {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
 }
 
-.content-filter{
+.content-filter {
     width: 40%;
 }
 
-.filtrar-all{
+.filtrar-all {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     margin: 1rem 0;
 }
-.text-filter{
+
+.text-filter {
     font-size: 16px;
     font-weight: bold;
     color: #333333;
     margin: 0.5rem 0;
 }
-.filtrar-contrato{
+
+.filtrar-contrato {
     margin: 1rem 0;
 }
 
-.nivel-de-experiencia{
+.nivel-de-experiencia {
     margin: 1rem 0;
 }
 
-.width-empresa{
+.width-empresa {
     width: 50%;
     margin: 1rem 0;
 }
 
-.cidade-vaga{
+.cidade-vaga {
     margin: 1rem 0;
 }
 
-.btns-filter{
+.btns-filter {
     cursor: pointer;
     font-size: 14px;
     padding: 6px 14px;
@@ -161,12 +175,12 @@ h1, h2, h3, h4, h5, h6{
 }
 
 
-.group-searchfilter{
+.group-searchfilter {
     display: flex;
     align-items: center;
 }
 
-.group-searchfilter input{
+.group-searchfilter input {
     margin: 1rem 0;
     width: 50%;
     height: 36px;
@@ -175,7 +189,7 @@ h1, h2, h3, h4, h5, h6{
     outline: none;
 }
 
-.group-searchfilter button{
+.group-searchfilter button {
     width: 10%;
     height: 36px;
     background: none;
@@ -183,19 +197,19 @@ h1, h2, h3, h4, h5, h6{
     cursor: pointer;
 }
 
-.btns-cidade{
+.btns-cidade {
     width: 50%;
 }
 
-.btns-cidade button{
+.btns-cidade button {
     margin: 0.5rem 0;
 }
 
-.container-vaga{
+.container-vaga {
     width: 100%;
 }
 
-.content-vaga{
+.content-vaga {
     padding: 1rem;
     display: flex;
     justify-content: center;
@@ -207,43 +221,43 @@ h1, h2, h3, h4, h5, h6{
     border-top: 1px solid #a8a8a8b2;
 }
 
-.content-vaga:hover{
+.content-vaga:hover {
     background-color: #bbbbbb63;
 }
 
-.content-vaga h1{
+.content-vaga h1 {
     text-align: center;
     font-size: 30px;
     color: #34495E;
 }
 
-.descricao-vaga{
+.descricao-vaga {
     margin: 1rem 0;
     text-align: center;
     color: #808080;
 }
 
-.content-vaga span{
+.content-vaga span {
     font-size: 20px;
 }
 
-.content-vaga-description{
+.content-vaga-description {
     width: 70%;
     min-width: 250px;
     text-align: center;
 }
 
-.content-image img{
+.content-image img {
     width: 130px;
 }
 
-.status-vaga{
+.status-vaga {
     margin: 1rem 0;
     display: flex;
     justify-content: center;
 }
 
-.status-vaga span{
+.status-vaga span {
     margin: 0 1rem;
     color: #333333;
 }

@@ -1,0 +1,32 @@
+.dropdown {
+    display: none;
+}
+
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+.dropdown-toggle.btn.btn-primary {
+    background: none;
+    color: #000;
+    border: none;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
+.dropdown-toggle.btn.btn-primary:focus {
+    color: #000;
+}
+
+.btn-check:active+.btn-primary:focus,
+.btn-check:checked+.btn-primary:focus,
+.btn-primary.active:focus,
+.btn-primary:active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+    background: none !important;
+}
+
+a {
+    text-decoration: none !important;
+}

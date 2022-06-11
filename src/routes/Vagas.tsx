@@ -1,11 +1,12 @@
 import '../css/vagas.css'
-import Button from "../components/ButtonNormal";
-import ButtonFilter from '../components/ButtonFilter';
 import FormSelect from '../components/FormSelect';
 import imageiconThor from '../assets/thor-sticker.png'
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { getVagas } from "../data";
+import ButtonNormal from '../components/ButtonNormal';
+import FilterMobile from '../components/filters/FilterMobile';
+import FilterDesktop from '../components/filters/FilterDesktop';
 
 export default function Vagas() {
     const vagas = getVagas();
@@ -15,9 +16,11 @@ export default function Vagas() {
     const [nivelExperiencia, setNivelExperiencia] = useState('');
 
     function handleAllVagas() {
-        setNivelExperiencia('');
         setTipoContrato('');
+        setNivelExperiencia('');
     }
+
+    const WidthWindow = window.screen.width;
 
     return (
         <main>
@@ -35,98 +38,74 @@ export default function Vagas() {
                 </div>
             </div>
 
-            <section className="container-contentmain">
-                <div className="breadcrumb">
-                    <Link to="/">Início</Link>
-                    <p>/ vagas {nomeVaga}</p>
-                </div>
-                <div className="container-cadastro-thor">
-                    <div className="img-icon-thor">
-                        <img src={imageiconThor} alt="ícone do Thor" />
-                    </div>
-                    <div className="create-perfil-content">
-                        <Link to="/">
-                            Crie um perfil na ProgramaThor para <strong> ser notificado assim que acontecer um matching entre uma vaga e o seu perfil.</strong>
-                        </Link>
+            <section className="container-vagas">
+                <div className='content-vagas'>
+                    <div className="breadcrumb">
+                        <Link to="/">Início</Link>
+                        <p>/ vagas {nomeVaga}</p>
                     </div>
 
-                    <div className="btn-mecadastrar">
-                        <Button textButton="Me cadastrar" />
-                    </div>
-                </div>
-
-                {/*onChange={event => setNomeVaga(event.target.value)} value={nomeVaga}*/}
-                <div className="container-content-vagas">
-                    <div className="content-filter">
-                        <div className="filtrar-all">
-                            <h2 className="text-filter">Filtrar:</h2>
-                            <ButtonFilter onclick={handleAllVagas} nameButton="TODAS" styleButton="btns-filter" />
-                        </div>
-                        <div className="filtrar-contrato">
-                            <h2 className="text-filter">Tipo de contrato:</h2>
-                            <ButtonFilter onclick={() => setTipoContrato("CLT")} nameButton="CLT" styleButton="btns-filter" />
-                            <ButtonFilter onclick={() => setTipoContrato("PJ")} nameButton="PJ" styleButton='btns-filter' />
-                            <ButtonFilter onclick={() => setTipoContrato("Estágio")} nameButton="Estágio" styleButton='btns-filter' />
-                        </div>
-                        <div className="nivel-de-experiencia">
-                            <h2 className="text-filter">Nível de experiência</h2>
-                            <ButtonFilter onclick={() => setNivelExperiencia("Júnior")} nameButton="Júnior" styleButton="btns-filter" />
-                            <ButtonFilter onclick={() => setNivelExperiencia("Pleno")} nameButton="Pleno" styleButton='btns-filter' />
-                            <ButtonFilter onclick={() => setNivelExperiencia("Sênior")} nameButton="Sênior" styleButton='btns-filter' />
-                        </div>
-                        {/*
-                            <div className="width-empresa">
-                            <h2 className="text-filter">Tamanho da empresa</h2>
-                            <button className="btns-filter">Startup</button>
-                            <button className="btns-filter">Grande empresa</button>
-                            <button className="btns-filter">Pequena/média empresa</button>
-                        </div>
-
-                         <div className="cidade-vaga">
-                            <h2 className="text-filter">Cidade da vaga</h2>
-                            <div className="group-searchfilter">
-                                <input type="text" placeholder="Cidade" />
-                                <button><i className="fas fa-search"></i></button>
+                    {WidthWindow >= 991 ?
+                        <div className="container-cadastro-thor">
+                            <div className="img-icon-thor">
+                                <img src={imageiconThor} alt="ícone do Thor" />
                             </div>
-                            <div className="btns-cidade">
-                                <button className="btns-filter">Remoto</button>
-                                <button className="btns-filter">Aceita candidatos de fora</button>
+                            <div className="create-perfil-content">
+                                <Link to="/">
+                                    Crie um perfil na ProgramaThor para <strong> ser notificado assim que acontecer um matching entre uma vaga e o seu perfil.</strong>
+                                </Link>
                             </div>
-                        </div>
-                        */
-                        }
-                    </div>
 
-                    <div className="container-vaga">
-                        {vagas.filter((vaga) => {
-                            if (vaga.tipo.includes(tipoContrato) && vaga.nivel.includes(nivelExperiencia) && vaga.name.toLocaleLowerCase().includes(nomeVaga.toLocaleLowerCase())) {
-                                console.log(vaga)
-                                return vaga;
-                            } else if (nomeVaga === "programadores" && vaga.tipo.includes(tipoContrato) && vaga.nivel.includes(nivelExperiencia)) {
-                                return vaga;
-                            }
+                            <div className="btn-mecadastrar">
+                                <ButtonNormal textButton="Me cadastrar" colorBtn='#32B796' />
+                            </div>
+                        </div> : ''
+                    }
 
-                        }).map((vaga, key) => {
-                            return (
-                                <div className="content-vaga" key={key}>
-                                    <div className='content-image'>
-                                        <img src={vaga.image} alt="logo-company" />
-                                    </div>
-                                    <div className='content-vaga-description'>
-                                        <h1>{vaga.name}</h1>
-                                        <span className="descricao-vaga">{vaga.descricao}</span>
-                                        <div className="status-vaga">
-                                            <span><i className="fas fa-map-marker-alt"></i>{vaga.local}</span>
-                                            <span><i className="far fa-file-alt"></i>{vaga.tipo}</span>
-                                            <span><i className="far fa-chart-bar"></i>{vaga.nivel}</span>
-                                            <span><i className="far fa-money-bill-alt">R$</i>{vaga.salario}</span>
+                    {/*onChange={event => setNomeVaga(event.target.value)} value={nomeVaga}*/}
+                    <div className="container-content-vagas">
+                        {WidthWindow <= 991 ?
+                            <FilterMobile
+                                onNivelExperiencia={(e) => setNivelExperiencia(e.target.name)}
+                                onTipoContrato={(e) => setTipoContrato(e.target.name)}
+                            /> :
+                            <FilterDesktop
+                                onHandleAllVagas={handleAllVagas}
+                                onNivelExperiencia={(e) => setNivelExperiencia(e.target.name)}
+                                onTipoContrato={(e) => setTipoContrato(e.target.name)}
+                            />}
+
+                        <div className="container-vaga">
+                            {vagas.filter((vaga) => {
+                                if (vaga.tipo.includes(tipoContrato) && vaga.nivel.includes(nivelExperiencia) && vaga.name.toLocaleLowerCase().includes(nomeVaga.toLocaleLowerCase())) {
+                                    return vaga;
+                                } else if (nomeVaga === "programadores" && vaga.tipo.includes(tipoContrato) && vaga.nivel.includes(nivelExperiencia)) {
+                                    return vaga;
+                                }
+
+                            }).map((vaga, key) => {
+                                return (
+                                    <div className="content-vaga" key={key}>
+                                        <div className='content-image'>
+                                            <img src={vaga.image} alt="logo-company" />
+                                        </div>
+                                        <div className='content-vaga-description'>
+                                            <h1>{vaga.name}</h1>
+                                            <span className="descricao-vaga">{vaga.descricao}</span>
+                                            <div className="status-vaga">
+                                                <span><i className="fas fa-map-marker-alt"></i>{vaga.local}</span>
+                                                <span><i className="far fa-file-alt"></i>{vaga.tipo}</span>
+                                                <span><i className="far fa-chart-bar"></i>{vaga.nivel}</span>
+                                                <span><i className="far fa-money-bill-alt">R$</i>{vaga.salario}</span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            )
-                        })}
+                                )
+                            })}
+                        </div>
                     </div>
                 </div>
+
             </section>
         </main>
     )

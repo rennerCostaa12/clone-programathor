@@ -1,11 +1,9 @@
-import Carousel from 'react-bootstrap/Carousel'
 import "../css/carousel.css"
-import IconTeste from '../assets/icon-check.png';
 
 export default function Carrousel() {
 
     return (
-        <>
+        <div className="content-carousel">
             <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
                 <ol className="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active">
@@ -23,8 +21,8 @@ export default function Carrousel() {
                             entrevistas e me inserir no mercado.
                         </p>
 
-                        <small>Bruno</small>
-                        <small>Desenvolvedor Front-End na Wide Desenvolvimento Humano</small>
+                        <small className='name-post'>-Bruno</small>
+                        <small className='comment-post'>Desenvolvedor Front-End na Wide Desenvolvimento Humano</small>
                     </div>
                     <div className="carousel-item">
                         <p>
@@ -32,8 +30,8 @@ export default function Carrousel() {
                             indicando se a vaga é compatível com seu perfil.
                         </p>
 
-                        <small>Ademir</small>
-                        <small>Programador Back-End C#</small>
+                        <small className='name-post'> -Ademir</small>
+                        <small className='comment-post'>Programador Back-End C#</small>
 
                     </div>
                     <div className="carousel-item">
@@ -44,22 +42,21 @@ export default function Carrousel() {
                             de trabalho. Obrigado Equipe ProgramaThor!
                         </p>
 
-                        <small>Eduardo Garcia</small>
-                        <small>Desenvolvedor Full Stack</small>
+                        <small className='name-post'>-Eduardo Garcia</small>
+                        <small className='comment-post'>Desenvolvedor Full Stack</small>
 
                     </div>
                 </div>
                 <div className='content-btn-prev-and-next'>
                     <button className='btn-prev' type="button" data-target="#carouselExampleIndicators" data-slide="prev">
-                        <i className="fas fa-arrow-alt-circle-left"></i>
+                        <i className="fas fa-angle-left"></i>
                     </button>
                     <button className='btn-next' type="button" data-target="#carouselExampleIndicators" data-slide="next">
-                        <i className="fas fa-arrow-alt-circle-right"></i>
+                        <i className="fas fa-angle-right"></i>
                     </button>
                 </div>
-
             </div>
-        </>
+        </div>
 
     )
 }

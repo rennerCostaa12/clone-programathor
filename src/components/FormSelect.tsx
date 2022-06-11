@@ -1,4 +1,4 @@
-interface FormSelectProps{
+interface FormSelectProps {
     onchange: () => void,
     valueForm: string,
 }
@@ -6,9 +6,8 @@ interface FormSelectProps{
 export default function FormSelect({ onchange, valueForm }: FormSelectProps) {
     return (
         <>
-            {console.log(onchange)}
             <form>
-                <select name="skills_vagas" onChange={onchange}  value={valueForm}>
+                <select name="skills_vagas" onChange={onchange} value={valueForm}>
                     <option value="programadores">Todos os skills</option>
                     <option value="Front-End">Front-End</option>
                     <option value="Back-End">Back-End</option>

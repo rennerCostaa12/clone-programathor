@@ -2,9 +2,11 @@ import ButtonNormal from "../components/ButtonNormal";
 import CardVagas from "../components/CardVagas";
 import { Link } from "react-router-dom";
 import IconCheck from '../assets/icon-check.png';
+import ImageVacancie from '../assets/vancancies-img.png';
 import { getVagas } from "../data";
 import Carrousel from "../components/Carrousel";
 import "../css/main.css"
+import "../css/responsive.css";
 
 export default function App() {
 
@@ -12,7 +14,7 @@ export default function App() {
 
   return (
     <div>
-      <header className="content-header-banner">
+      <section className="content-header-banner">
         <div className="content-banner">
           <h1>
             OPORTUNIDADES PARA <br />
@@ -21,7 +23,7 @@ export default function App() {
 
           <div>
             <Link to="/vagas">
-              <ButtonNormal textButton="VER NOSSAS VAGAS" />
+              <ButtonNormal textButton="VER NOSSAS VAGAS" colorBtn="#32b796" />
             </Link>
           </div>
 
@@ -32,7 +34,7 @@ export default function App() {
             </p>
           </div>
         </div>
-      </header>
+      </section>
 
       <section className="content-merchan">
         <div>
@@ -88,17 +90,58 @@ export default function App() {
 
         <div className="content-btn-all-vacancies">
           <Link to="/vagas">
-            <ButtonNormal textButton="VER TODAS AS VAGAS" />
+            <ButtonNormal textButton="VER TODAS AS VAGAS" colorBtn="#32b796" />
           </Link>
         </div>
 
+      </section>
 
-        <div className="content-depoiment">
-          <h1>Depoimentos Desenlvolvedores</h1>
-          <Carrousel />
+      <section className="content-depoiment">
+        <h1>Depoimentos Desenlvolvedores</h1>
+        <Carrousel />
+      </section>
+
+      <section className="container-vacancies">
+        <div className="content-vacancies">
+          <div className="content-image-person">
+            <img src={ImageVacancie} alt="image-person-jumping" />
+          </div>
+
+          <div className="content-description-vacancies">
+            <h4>Descubra o salário médio para cada linguagem de programação.</h4>
+
+            <p>
+              Você gostaria de saber qual é o salário médio para cada linguagem de programação?
+              A ProgramaThor coloca à sua disposição uma ferramenta que expõe a média salarial praticada
+              no mercado em função da linguagem e do nível de experiência dos candidatos.
+            </p>
+
+            <ButtonNormal textButton="VER SALÁRIOS DE TI" colorBtn="#34495E" />
+          </div>
         </div>
       </section>
-    </div>
+
+      <footer className="footer">
+        <small>Clone do Programathor - https://programathor.com.br/</small>
+        <div>
+          <ul className="midia-socials">
+            <li>
+              <a href="https://github.com/rennerCostaa12"><i className="fab fa-github"></i></a>
+            </li>
+
+            <li>
+              <a href="https://www.linkedin.com/in/renner-costa-098a101a0/"><i className="fab fa-linkedin"></i></a>
+            </li>
+
+            <li>
+              <a href="https://www.instagram.com/rennercostaa/"><i className="fab fa-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+
+        <span>Desenvolvido por Renner Costa</span>
+      </footer>
+    </div >
   )
 }
 

@@ -6,7 +6,9 @@ import App from './routes/App';
 
 function AppRoutes() {
   return (
-    <div> 
+    <div style={{
+      overflow: "hidden"
+    }}>
       <Router>
         <Header />
         <Routes>
@@ -14,7 +16,7 @@ function AppRoutes() {
           <Route path="vagas" element={<Vagas />} />
           <Route path="empresas" element={<Empresas />} />
         </Routes>
-    </Router>
+      </Router>
     </div>
   )
 }

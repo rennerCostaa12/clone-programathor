@@ -6,10 +6,12 @@
     height: 70vh;
     background-image: linear-gradient(-225deg, #004e92a6 0%, #000c40a6 20%), url('../assets/image-banner.jpg');
     background-repeat: no-repeat;
-    background-size: 100% 40rem;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .content-banner {
+    margin-top: 4rem;
     text-align: left !important;
 }
 
@@ -40,13 +42,14 @@
     display: flex;
     justify-content: center;
     gap: 25px;
-    padding: 3rem 4rem;
+    padding: 2.5rem 4rem;
 }
 
 .content-merchan h1 {
     font-size: 20px;
     color: #34495E;
     font-weight: bold;
+    margin: 0;
 }
 
 .content-merchan p {
@@ -70,43 +73,121 @@
     width: 20px;
 }
 
-.emphasis-text{
+.emphasis-text {
     font-weight: bold;
 }
 
-.content-last-vacancies{
+.content-last-vacancies {
     padding: 2.7rem 0;
     background-color: #F4F4F4;
 }
 
-.title-last-vacancies{
+.title-last-vacancies {
     text-align: center;
     font-size: 34px;
     margin-bottom: 3rem;
     color: #333333;
 }
 
-.content-cards-vacancy{
+.content-cards-vacancy {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 35px;
 }
 
-.content-btn-all-vacancies{
+.content-btn-all-vacancies {
     display: flex;
     justify-content: center;
     margin: 3rem 0;
 }
 
-.content-depoiment{
+.content-depoiment {
     background-color: #fff;
     padding: 2rem 10rem;
 }
 
-.content-depoiment h1{
+.content-depoiment h1 {
     text-align: center;
     margin-bottom: 4rem;
     color: #333333;
     font-size: 30px;
+}
+
+.container-vacancies {
+    display: flex;
+    justify-content: center;
+    background-color: #F4F4F4;
+    padding: 6rem 0rem;
+}
+
+.content-vacancies {
+    width: 72rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-image-person {
+    display: flex;
+    justify-content: center;
+}
+
+.content-image-person img {
+    width: 360px;
+    height: 250.33px;
+}
+
+.content-description-vacancies {
+    text-align: center;
+}
+
+.content-description-vacancies h4 {
+    font-size: 20px;
+    color: #333333;
+    margin: 1rem 0;
+}
+
+.content-description-vacancies p {
+    color: #808080;
+    font-size: 16px;
+    margin: 2rem 0;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffff;
+    background-color: #2A3F54;
+    padding: 2rem;
+}
+
+.footer .midia-socials {
+    margin: 1rem 0;
+    padding-right: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    font-size: 30px;
+}
+
+.footer .midia-socials li {
+    transform: scale(0.8);
+    transition: all ease 0.2s;
+}
+
+.footer .midia-socials li:hover {
+    transform: scale(1);
+}
+
+.footer .midia-socials a {
+    color: #fff;
+    transform: scale(0.8);
+}
+
+.footer .midia-socials a:hover {
+    transform: scale(1);
 }
