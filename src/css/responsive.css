@@ -105,4 +105,21 @@
     .carousel-inner {
         height: 490px !important;
     }
+
+    /* VAGAS */
+    .content-image {
+        display: none;
+    }
+
+    .content-vaga h1 {
+        font-size: 25px;
+    }
+
+    .content-vaga span {
+        font-size: 15px;
+    }
+
+    .status-vaga span {
+        font-size: 12px;
+    }
 }
